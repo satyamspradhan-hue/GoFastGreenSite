@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GoFastGreen Pvt Ltd</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loginBox" class="box">
+    <h2>GoFastGreen Login</h2>
+    <input id="username" placeholder="Username">
+    <input id="password" placeholder="Passcode" type="password">
+    <button onclick="login()">Login</button>
+</div>
+
+<div id="mainMenu" class="box hidden">
+    <h2>Main Menu</h2>
+    <button onclick="openPage('slotBox')">Daily Slot Booking</button>
+    <button onclick="openPage('completedBox')">Slots Completed</button>
+    <button onclick="openPage('leaveBox')">Leave Request</button>
+    <button onclick="openPage('loanBox')">Loans</button>
+    <button onclick="openAdmin()">Admin Controls</button>
+    <button onclick="logout()">Logout</button>
+</div>
+
+<div id="slotBox" class="box hidden">
+    <h2>Daily Slot Booking</h2>
+    <p id="slotCount"></p>
+    <button onclick="bookSlot()">Book Slot</button>
+    <button onclick="back()">Back</button>
+</div>
+
+<div id="completedBox" class="box hidden">
+    <h2>Slots Completed</h2>
+    <p id="doneCount"></p>
+    <button onclick="back()">Back</button>
+</div>
+
+<div id="leaveBox" class="box hidden">
+    <h2>Leave Requests</h2>
+    <p id="leaveCount"></p>
+    <button onclick="takeLeave()">Request Leave</button>
+    <button onclick="back()">Back</button>
+</div>
+
+<div id="loanBox" class="box hidden">
+    <h2>Loan Requests</h2>
+    <p id="loanList"></p>
+    <input id="loanInput" placeholder="Enter loan amount">
+    <button onclick="addLoan()">Request Loan</button>
+    <button onclick="back()">Back</button>
+</div>
+
+<div id="adminLogin" class="box hidden">
+    <h2>Admin Login</h2>
+    <input id="adminPass" placeholder="Admin Password" type="password">
+    <button onclick="checkAdmin()">Enter</button>
+    <button onclick="back()">Back</button>
+</div>
+
+<div id="adminPanel" class="box hidden">
+    <h2>Admin Panel</h2>
+    <button onclick="resetSlots()">Reset Daily Slots</button>
+    <button onclick="resetLeaves()">Reset Monthly Leaves</button>
+    <button onclick="back()">Back</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
